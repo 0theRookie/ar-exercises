@@ -34,7 +34,10 @@ puts "|============= Men Only Stores =============|"
 end
 
 puts "|============= Women Only Stores =============|"
-@womens_stores = Store.where(mens_apparel: false, womens_apparel: true)
+@womens_stores = Store.where(
+  mens_apparel: false,
+  womens_apparel: true,
+).where('annual_revenue < 1000000')
 @womens_stores.each do |store|
   puts "#{store.name} : Annual Revenue #{store.annual_revenue}"
 end
