@@ -7,7 +7,7 @@ puts "----------"
 Store.create(
   name: "Burnaby", 
   annual_revenue: 300000,
-  mens_apparel: true, 
+  mens_apparel: true,
   womens_apparel: true
 )
 Store.create(
@@ -22,4 +22,5 @@ Store.create(
   mens_apparel: true, 
   womens_apparel: false
 )
+
 puts "#{Store.count} stores added."
